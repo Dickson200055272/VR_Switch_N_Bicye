@@ -36,7 +36,7 @@ public class OtherTest : MonoBehaviour
             x = Input.gyro.attitude.x;
             y = Input.gyro.attitude.y;
             z = Input.gyro.attitude.z;  
-            //infoMsg.text = "Using Gyroscope : " + x + " , " + y + " , " + z;
+            //infoMsg.text = "Using Gyroscope : " + jx + " , " + y + " , " + z;
             Force = new Vector3(-x * 10.0F, 0.0F, -z * 10.0F);
         }
         //Ball.forward(force);
