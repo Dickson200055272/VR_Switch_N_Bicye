@@ -70,8 +70,14 @@ public class JoyconDemo : MonoBehaviour {
             // Gyro values: x, y, z axis values (in radians per second)
             gyro = j.GetGyro();
 
-            // Accel values:  x, y, z axis values (in Gs)
-            accel = j.GetAccel();
+
+			//MathRound();
+			//function roundVector(vector, unit)
+			// return vector - Vector3.new(vector.X % unit, vector.Y % unit, vector.Z % unit)
+
+
+			// Accel values:  x, y, z axis values (in Gs)
+			accel = j.GetAccel();
 
             orientation = j.GetVector();
 			if (j.GetButton(Joycon.Button.DPAD_UP)){
