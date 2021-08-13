@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 175246628}
   - component: {fileID: 175246629}
-  - component: {fileID: 175246627}
   m_Layer: 0
   m_Name: JoyconManager
   m_TagString: Untagged
@@ -141,20 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &175246627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175246626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f72f23df7328fe448a0dff0426057022, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GetJCX: 0
-  PositX: 0
 --- !u!4 &175246628
 Transform:
   m_ObjectHideFlags: 0
@@ -196,13 +181,30 @@ GameObject:
   - component: {fileID: 195250748}
   - component: {fileID: 195250747}
   - component: {fileID: 195250751}
+  - component: {fileID: 195250746}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: LJoycon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!54 &195250746
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195250745}
+  serializedVersion: 2
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &195250747
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -273,7 +275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195250745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 1.11}
+  m_LocalPosition: {x: 0, y: 1, z: 2.233}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -294,10 +296,10 @@ MonoBehaviour:
   stick:
   - 0
   - 0
-  gyro: {x: 0, y: 0, z: 0}
   accel: {x: 0, y: 0, z: 0}
   jc_ind: 0
   orientation: {x: 0, y: 0, z: 0, w: 0}
+  gyro: {x: 0, y: 0, z: 0}
 --- !u!1 &250149498
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,10 +333,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stick: []
-  gyro: {x: 0, y: 0, z: 0}
   accel: {x: 0, y: 0, z: 0}
   jc_ind: 1
   orientation: {x: 0, y: 0, z: 0, w: 0}
+  gyro: {x: 0, y: 0, z: 0}
 --- !u!23 &250149500
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -518,6 +520,8 @@ GameObject:
   - component: {fileID: 856180011}
   - component: {fileID: 856180010}
   - component: {fileID: 856180009}
+  - component: {fileID: 856180008}
+  - component: {fileID: 856180013}
   m_Layer: 0
   m_Name: SphereJoyConX_move
   m_TagString: Untagged
@@ -525,6 +529,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &856180008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856180007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f72f23df7328fe448a0dff0426057022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GetJCX: 0
+  PositX: 0
+  PositY: 0
+  PositZ: 0
+  popov3: {x: 0, y: 0, z: 0}
+  ant: {fileID: 195250745}
 --- !u!135 &856180009
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -595,12 +617,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856180007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.23, y: 0, z: -1.01}
+  m_LocalPosition: {x: 0.81, y: 0.26, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &856180013
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856180007}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &868689641
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,11 +8,24 @@ public class JoyconDemo : MonoBehaviour {
 
     // Values made available via Unity
     public float[] stick;
-    public Vector3 gyro;
-    public Vector3 accel;
+    public Vector3  accel;
     public int jc_ind = 0;
     public Quaternion orientation;
-	//public Vector3 gyro;
+	public Vector3 gyro;
+
+   /* public static Vector3 Round(this Vector3 gyro, int decimalPlaces = 2)
+			{
+				float multiplier = 1;
+				for (int i = 0; i < decimalPlaces; i++)
+				{
+					multiplier *= 10f;
+				}
+				return new Vector3(
+					Mathf.Round(gyro.x * multiplier) / multiplier,
+					Mathf.Round(gyro.y * multiplier) / multiplier,
+					Mathf.Round(gyro.z * multiplier) / multiplier);
+			}
+   */
 
     void Start ()
     {
@@ -69,23 +82,36 @@ public class JoyconDemo : MonoBehaviour {
 
             // Gyro values: x, y, z axis values (in radians per second)
             gyro = j.GetGyro();
+			 
+			
+			
+			
+			
+
 
 
 			//MathRound();
 			//function roundVector(vector, unit)
 			// return vector - Vector3.new(vector.X % unit, vector.Y % unit, vector.Z % unit)
 
+			
 
 			// Accel values:  x, y, z axis values (in Gs)
 			accel = j.GetAccel();
 
             orientation = j.GetVector();
 			if (j.GetButton(Joycon.Button.DPAD_UP)){
-				gameObject.GetComponent<Renderer>().material.color = Color.red;
-			} else{
 				gameObject.GetComponent<Renderer>().material.color = Color.blue;
+			} else{
+				gameObject.GetComponent<Renderer>().material.color = Color.red;
 			}
             gameObject.transform.rotation = orientation;
-        }
+        } 
+		
+		
     }
+	
+	
+	
+	
 }
