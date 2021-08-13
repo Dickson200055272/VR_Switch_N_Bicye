@@ -546,7 +546,8 @@ MonoBehaviour:
   PositY: 0
   PositZ: 0
   popov3: {x: 0, y: 0, z: 0}
-  ant: {fileID: 195250745}
+  Cant: {fileID: 195250745}
+  Bell: {fileID: 856180007}
 --- !u!135 &856180009
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -617,7 +618,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856180007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 0.26, z: -0.66}
+  m_LocalPosition: {x: 0.81, y: 0.26, z: -1.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
